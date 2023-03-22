@@ -5,9 +5,7 @@ def downloadlibs():
     subprocess.check_call([sys.executable, '-m', 'pip', 'install',
     'customtkinter', 'Pillow'])
 
-
-#downloablibs()                            REMOVE START HASHTAG TO DOWNLOAD REQUIRED LIBRARIES ON CODE RUN
-
+#downloadlibs()                            ##REMOVE START HASHTAG TO DOWNLOAD REQUIRED LIBRARIES ON CODE RUN
 
 import tkinter
 import customtkinter
@@ -16,16 +14,11 @@ import sys
 from PIL import Image
 from pathlib import Path
 
-
-
-
-
 customtkinter.set_appearance_mode("System")  
 customtkinter.set_default_color_theme("blue")  
 
 app = customtkinter.CTk()  
 app.geometry("400x240")
-
 
 location = os.path.realpath(
     os.path.join(os.getcwd(), os.path.dirname(__file__))) #locates working directory to use images
@@ -39,8 +32,6 @@ offbeat_image = customtkinter.CTkImage(light_image=Image.open( location + "\\aof
 
 stunart_image = customtkinter.CTkImage(light_image=Image.open( location + "\\astunart.png"),
                                        size=(50,50))
-
-
 
 crap = customtkinter.CTkButton(app,text="abinbag", image=binbag_image)
 crap.grid(column=1, row=1)
