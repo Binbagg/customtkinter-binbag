@@ -1,9 +1,24 @@
+import sys
+import subprocess
+
+def downloadlibs():
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install',
+    'customtkinter', 'Pillow'])
+
+
+#downloablibs()                            REMOVE START HASHTAG TO DOWNLOAD REQUIRED LIBRARIES ON CODE RUN
+
+
 import tkinter
 import customtkinter
 import os
 import sys
 from PIL import Image
 from pathlib import Path
+
+
+
+
 
 customtkinter.set_appearance_mode("System")  
 customtkinter.set_default_color_theme("blue")  
