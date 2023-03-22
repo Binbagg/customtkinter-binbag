@@ -8,13 +8,13 @@ customtkinter.set_default_color_theme("blue")
 app = customtkinter.CTk()  
 app.geometry("400x240")
 
-binbag_image = customtkinter.CTkImage(light_image=Image.open("C:/Users/Us/Documents/Tommy/cute crap.png"),
+binbag_image = customtkinter.CTkImage(light_image=Image.open(""),
                                   size=(50, 50))
 
-offbeat_image = customtkinter.CTkImage(light_image=Image.open("C:/Users/Us/Documents/Tommy/cute offbeat.png"),
+offbeat_image = customtkinter.CTkImage(light_image=Image.open(""),
                                        size=(50,50))
 
-stunart_image = customtkinter.CTkImage(light_image=Image.open("C:/Users/Us/Documents/Tommy/cute stuanrt.png"),
+stunart_image = customtkinter.CTkImage(light_image=Image.open(""),
                                        size=(50,50))
 
 
