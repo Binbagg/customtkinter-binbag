@@ -1,6 +1,9 @@
 import tkinter
 import customtkinter
+import os
+import sys
 from PIL import Image
+from pathlib import Path
 
 customtkinter.set_appearance_mode("System")  
 customtkinter.set_default_color_theme("blue")  
@@ -8,14 +11,20 @@ customtkinter.set_default_color_theme("blue")
 app = customtkinter.CTk()  
 app.geometry("400x240")
 
-binbag_image = customtkinter.CTkImage(light_image=Image.open("[[customtkinter-binbag-main/acrap.png]]"),
+
+location = os.path.realpath(
+    os.path.join(os.getcwd(), os.path.dirname(__file__))) #locates working directory to use images
+
+
+binbag_image = customtkinter.CTkImage(light_image=Image.open( location + "\\acrap.png"),
                                   size=(50, 50))
 
-offbeat_image = customtkinter.CTkImage(light_image=Image.open("[[customtkinter-binbag-main/aoffbeat.png]]"),
+offbeat_image = customtkinter.CTkImage(light_image=Image.open( location + "\\aoffbeat.png"),
                                        size=(50,50))
 
-stunart_image = customtkinter.CTkImage(light_image=Image.open("[[customtkinter-binbag-main/astunart.png]]"),
+stunart_image = customtkinter.CTkImage(light_image=Image.open( location + "\\astunart.png"),
                                        size=(50,50))
+
 
 
 crap = customtkinter.CTkButton(app,text="abinbag", image=binbag_image)
